@@ -1,4 +1,3 @@
-package Login;
 import javax.swing.JOptionPane;
 
 
@@ -15,9 +14,10 @@ public class App {
         passWord = logSys.capture_details("password");
         firstName = JOptionPane.showInputDialog(null, "first name");
         secondName = JOptionPane.showInputDialog(null, "second name");
+        JOptionPane.showMessageDialog(null, logSys.register_user(true, "username&password"));
         JOptionPane.showMessageDialog(null, userName + " " + passWord + " " + firstName + " " + secondName);
         logSys.userDetails.add(firstName);
         logSys.userDetails.add(secondName);
-        logSys.login_process();
+        logSys.login_user();
     }
 }
